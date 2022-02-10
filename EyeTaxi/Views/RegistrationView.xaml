@@ -1,0 +1,379 @@
+﻿<Window
+    x:Class="EyeTaxi.Views.RegistrationView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:hc="https://handyorg.github.io/handycontrol"
+    xmlns:local="clr-namespace:EyeTaxi.Views"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="clr-namespace:EyeTaxi.ViewModels"
+    Name="window"
+    Title="RegistrationView"
+    AllowsTransparency="True"
+    Background="Transparent"
+    FontFamily="{DynamicResource MaterialDesignFont}"
+    MouseDown="window_MouseDown"
+    ResizeMode="NoResize"
+    SizeToContent="WidthAndHeight"
+    TextElement.FontSize="13"
+    TextElement.FontWeight="Regular"
+    TextOptions.TextFormattingMode="Ideal"
+    TextOptions.TextRenderingMode="Auto"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <Window.DataContext>
+        <viewModels:RegistrationViewModel />
+    </Window.DataContext>
+    <Window.Resources>
+        <Geometry x:Key="Taxi">
+            M612,309.593v116.561c0,8.06-6.536,14.596-14.596,14.596H495.439v101.965c0,8.06-6.536,14.596-14.596,14.596H364.282c-8.06,0-14.596-6.536-14.596-14.596V440.75h-87.373v101.965c0,8.06-6.536,14.596-14.596,14.596H131.157c-8.06,0-14.596-6.536-14.596-14.596V440.75H14.596C6.536,440.75,0,434.214,0,426.155V309.593c0-8.06,6.536-14.596,14.596-14.596
+            h116.561c8.06,0,14.596,6.536,14.596,14.596v101.965h87.37V309.593c0-8.06,6.536-14.596,14.596-14.596h116.561
+            c8.06,0,14.596,6.536,14.596,14.596v101.965h87.37V309.593c0-8.06,6.536-14.596,14.596-14.596h116.561
+            C605.464,294.998,612,301.534,612,309.593z M76.137,83.886h41.446V224.27c0,8.06,6.536,14.596,14.596,14.596
+            c8.06,0,14.596-6.536,14.596-14.596V83.886h41.446c8.06,0,14.596-6.536,14.596-14.596s-6.536-14.596-14.596-14.596H76.137
+            c-8.06,0-14.596,6.536-14.596,14.596S68.074,83.886,76.137,83.886z M239.53,61.169c0.286-0.426,0.636-0.806,0.966-1.2
+            c0.277-0.33,0.525-0.686,0.826-0.987c0.342-0.342,0.741-0.628,1.118-0.937c0.356-0.289,0.689-0.604,1.068-0.861
+            c0.359-0.239,0.762-0.423,1.144-0.633c0.464-0.254,0.917-0.523,1.404-0.724c0.079-0.032,0.143-0.082,0.219-0.114
+            c0.336-0.131,0.683-0.184,1.022-0.289c0.502-0.158,0.995-0.324,1.512-0.426c0.467-0.093,0.931-0.123,1.398-0.169
+            c0.476-0.047,0.949-0.108,1.43-0.108c0.496,0,0.978,0.061,1.468,0.111c0.455,0.047,0.905,0.076,1.357,0.166
+            c0.537,0.105,1.048,0.28,1.568,0.444c0.324,0.102,0.651,0.149,0.972,0.274c0.076,0.029,0.134,0.079,0.21,0.108
+            c0.517,0.213,0.995,0.496,1.483,0.768c0.356,0.199,0.733,0.365,1.065,0.59c0.409,0.271,0.768,0.607,1.147,0.922
+            c0.35,0.292,0.727,0.555,1.045,0.876c0.315,0.315,0.575,0.686,0.864,1.03c0.318,0.382,0.657,0.747,0.934,1.159
+            c0.222,0.333,0.391,0.709,0.587,1.065c0.271,0.487,0.552,0.969,0.768,1.486c0.032,0.073,0.079,0.134,0.108,0.21l61.232,154.98
+            c2.963,7.496-0.715,15.976-8.212,18.939c-1.76,0.695-3.576,1.025-5.36,1.025c-5.815,0-11.312-3.5-13.58-9.236l-17.135-43.37
+            h-61.039l-17.135,43.37c-2.265,5.736-7.765,9.236-13.58,9.236c-1.784,0-3.599-0.33-5.36-1.025
+            c-7.496-2.963-11.174-11.44-8.212-18.939l61.232-154.98c0.029-0.076,0.079-0.134,0.108-0.21c0.216-0.52,0.499-1.004,0.774-1.495
+            C239.144,61.87,239.308,61.499,239.53,61.169z M270.63,157.069l-18.986-48.058l-18.989,48.058H270.63z M353.653,236.282
+            c2.531,1.746,5.415,2.583,8.273,2.583c4.636,0,9.195-2.204,12.027-6.311l41.434-60.07l41.434,60.07
+            c2.832,4.107,7.391,6.311,12.027,6.311c2.858,0,5.745-0.838,8.276-2.583c6.635-4.577,8.305-13.667,3.728-20.303l-47.731-69.201
+            l47.731-69.204c4.577-6.635,2.907-15.725-3.728-20.303c-6.635-4.577-15.725-2.907-20.303,3.728l-41.434,60.07L373.953,61
+            c-4.577-6.635-13.664-8.308-20.303-3.728c-6.635,4.577-8.305,13.667-3.728,20.303l47.731,69.204l-47.731,69.201
+            C345.351,222.618,347.018,231.705,353.653,236.282z M518.512,238.863c8.06,0,14.596-6.536,14.596-14.596V69.29
+            c0-8.06-6.536-14.596-14.596-14.596s-14.596,6.536-14.596,14.596v154.98C503.916,232.33,510.452,238.863,518.512,238.863z
+        </Geometry>
+    </Window.Resources>
+    <hc:TransitioningContentControl TransitionMode="Top2Bottom">
+        <materialDesign:Card
+            Name="Border"
+            Width="350"
+            Margin="40"
+            materialDesign:ShadowAssist.ShadowDepth="Depth5"
+            materialDesign:ShadowAssist.ShadowEdges="All"
+            Background="White"
+            UniformCornerRadius="5">
+            <Grid>
+                <Grid Name="RegView" Visibility="{Binding RegViewVisibility, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock
+                                Grid.Column="0"
+                                Margin="10,0,0,0"
+                                VerticalAlignment="Center"
+                                FontFamily="Product Sans"
+                                FontSize="30"
+                                FontWeight="Bold"
+                                Text="Welcome" />
+                            <Viewbox
+                                Grid.Column="1"
+                                Width="50"
+                                Margin="0,5,50,5"
+                                HorizontalAlignment="Right">
+                                <hc:AnimationPath
+                                    VerticalAlignment="Center"
+                                    Data="{StaticResource Taxi}"
+                                    PathLength="40"
+                                    Stroke="#FFB626"
+                                    StrokeThickness="20"
+                                    Duration="00:00:3" />
+                            </Viewbox>
+                            <Button
+                                Grid.Column="1"
+VerticalAlignment="Center"
+                    Width="25"
+                    Height="25"
+                    Margin="0,0,10,10"
+                    Padding="7"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+HorizontalAlignment="Right"
+                    hc:BackgroundSwitchElement.MouseDownBackground="PaleVioletRed"
+                    hc:BackgroundSwitchElement.MouseHoverBackground="Red"
+                    hc:BorderElement.CornerRadius="25"
+                    hc:IconElement.Geometry="{StaticResource DeleteGeometry}"
+                    Background="#4760F3"
+                    Style="{StaticResource ButtonCustom}">
+                                <b:Interaction.Triggers>
+                                    <b:EventTrigger EventName="PreviewMouseLeftButtonDown">
+                                        <b:InvokeCommandAction Command="{Binding CloseButtonClickCommand}" CommandParameter="{Binding ElementName=window}" />
+                                    </b:EventTrigger>
+                                </b:Interaction.Triggers>
+                                <materialDesign:PackIcon
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Foreground="White"
+                        Kind="Close" />
+                            </Button>
+                        </Grid>
+                        <Grid Grid.Row="1" Margin="0,0,0,10">
+                            <Button
+                                Margin="10"
+                                HorizontalAlignment="Left"
+                                Content="Registration">
+                                <b:Interaction.Triggers>
+                                    <b:EventTrigger EventName="Click">
+                                        <b:InvokeCommandAction Command="{Binding RegBtnClickCommand}" />
+                                    </b:EventTrigger>
+                                </b:Interaction.Triggers>
+                            </Button>
+                            <Button
+                                Margin="10"
+                                HorizontalAlignment="Right"
+                                Content="Login"
+                                Style="{StaticResource MaterialDesignFlatButton}">
+
+                                <b:Interaction.Triggers>
+                                    <b:EventTrigger EventName="Click">
+                                        <b:InvokeCommandAction Command="{Binding LogBtnClickCommand}" />
+                                    </b:EventTrigger>
+                                </b:Interaction.Triggers>
+                            </Button>
+                        </Grid>
+                        <hc:TextBox
+                            Grid.Row="2"
+                            Margin="10"
+Foreground="Black"
+                            hc:InfoElement.Placeholder="Username"
+                            Text="{Binding RegUsernameText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        <!--<TextBox
+                            Grid.Row="2"
+                            Margin="10"
+                            materialDesign:HintAssist.Hint="Username"
+                            Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                            Text="{Binding RegUsernameText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />-->
+                        <hc:PasswordBox
+Foreground="Black"
+                            Grid.Row="3"
+                            Margin="10"
+                            Name="RegPass"
+                            hc:InfoElement.Placeholder="Password"
+                            ShowClearButton="True"
+                            ShowEyeButton="True">
+                            <b:Interaction.Triggers>
+                                <b:EventTrigger EventName="Loaded">
+                                    <b:InvokeCommandAction Command="{Binding RegPasswordLoadedCommand}" CommandParameter="{Binding ElementName=RegPass}" />
+                                </b:EventTrigger>
+                            </b:Interaction.Triggers>
+                        </hc:PasswordBox>
+
+                        <!--<PasswordBox
+                            Grid.Row="3"
+                            Margin="10"
+                            Name="RegPass"
+                            materialDesign:HintAssist.Hint="Password"
+                            Style="{StaticResource MaterialDesignFloatingHintPasswordBox}">
+                            <b:Interaction.Triggers>
+                                <b:EventTrigger EventName="PasswordChanged">
+                                    <b:InvokeCommandAction Command="{Binding RegPassChangedCommand}" CommandParameter="{Binding ElementName=RegPass}" />
+                                </b:EventTrigger>
+                                <b:EventTrigger EventName="Loaded">
+                                    <b:InvokeCommandAction Command="{Binding RegPasswordLoadedCommand}" CommandParameter="{Binding ElementName=RegPass}" />
+                                </b:EventTrigger>
+                            </b:Interaction.Triggers>
+                        </PasswordBox>-->
+                        <hc:PasswordBox
+                            Name="RegConfirmPass"
+                            Grid.Row="4"
+Foreground="Black"
+                            Margin="10"
+                            hc:InfoElement.Placeholder="Confirm password"
+                            ShowClearButton="True"
+                            ShowEyeButton="True"
+                            >
+                            <b:Interaction.Triggers>
+                                <b:EventTrigger EventName="Loaded">
+                                    <b:InvokeCommandAction Command="{Binding RegConfirmPasswordLoadedCommand}" CommandParameter="{Binding ElementName=RegConfirmPass}" />
+                                </b:EventTrigger>
+                            </b:Interaction.Triggers>
+                        </hc:PasswordBox>
+
+                        <!--<PasswordBox
+                            Grid.Row="4"
+                            Margin="10"
+                            Name="RegConfirmPass"
+                            materialDesign:HintAssist.Hint="Confirm Password"
+                            Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" >
+                            <b:Interaction.Triggers>
+                                <b:EventTrigger EventName="PasswordChanged">
+                                    <b:InvokeCommandAction Command="{Binding RegConfirmPassChangedCommand}" CommandParameter="{Binding ElementName=RegConfirmPass}" />
+                                </b:EventTrigger>
+                                <b:EventTrigger EventName="Loaded">
+                                    <b:InvokeCommandAction Command="{Binding RegConfirmPasswordLoadedCommand}" CommandParameter="{Binding ElementName=RegConfirmPass}" />
+                                </b:EventTrigger>
+                            </b:Interaction.Triggers>
+                        </PasswordBox>-->
+                        <hc:TextBox
+                            Grid.Row="5"
+Foreground="Black"
+                            Margin="10"
+                            hc:InfoElement.Placeholder="Email"
+                            Text="{Binding EmailText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        <Button
+                            Grid.Row="6"
+                            Margin="10,20,10,20"
+                            Content="Register">
+                            <b:Interaction.Triggers>
+                                <b:EventTrigger EventName="Click">
+                                    <b:InvokeCommandAction Command="{Binding RegisterButtonClickedCommand}" />
+                                </b:EventTrigger>
+                            </b:Interaction.Triggers>
+                        </Button>
+                    </Grid>
+                </Grid>
+                <StackPanel Name="LoginView" Visibility="{Binding LogViewVisibility, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" />
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock
+                                Grid.Column="0"
+                                Margin="10,0,0,0"
+                                VerticalAlignment="Center"
+                                FontFamily="Product Sans"
+                                FontSize="30"
+                                FontWeight="Bold">
+                                Welcome
+                            </TextBlock>
+                            <Viewbox
+                                Grid.Column="1"
+                                Width="50"
+                                Margin="0,5,45,5"
+                                HorizontalAlignment="Right">
+                                <hc:AnimationPath
+                                    VerticalAlignment="Center"
+                                    Data="{StaticResource Taxi}"
+                                    PathLength="40"
+                                    Stroke="#FFB626"
+                                    StrokeThickness="20"
+                                    Duration="00:00:3" />
+                            </Viewbox>
+                            <Button
+Cursor="Hand"
+
+                                Grid.Column="1"
+VerticalAlignment="Center"
+                    Width="25"
+                    Height="25"
+                    Margin="0,0,10,10"
+                    Padding="7"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+HorizontalAlignment="Right"
+                    hc:BackgroundSwitchElement.MouseDownBackground="PaleVioletRed"
+                    hc:BackgroundSwitchElement.MouseHoverBackground="Red"
+                    hc:BorderElement.CornerRadius="25"
+                    hc:IconElement.Geometry="{StaticResource DeleteGeometry}"
+                    Background="#4760F3"
+                    Style="{StaticResource ButtonCustom}">
+                                <b:Interaction.Triggers>
+                                    <b:EventTrigger EventName="PreviewMouseLeftButtonDown">
+                                        <b:InvokeCommandAction Command="{Binding CloseButtonClickCommand}" CommandParameter="{Binding ElementName=window}" />
+                                    </b:EventTrigger>
+                                </b:Interaction.Triggers>
+                                <materialDesign:PackIcon
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Foreground="White"
+                        Kind="Close" />
+                            </Button>
+                        </Grid>
+                        <Grid Grid.Row="1" Margin="0,0,0,10">
+                            <Button
+                                Margin="10"
+                                HorizontalAlignment="Left"
+Cursor="Hand"
+
+                                Content="Registration"
+                                Style="{StaticResource MaterialDesignFlatButton}">
+                                <b:Interaction.Triggers>
+                                    <b:EventTrigger EventName="Click">
+                                        <b:InvokeCommandAction Command="{Binding RegBtnClickCommand}" />
+                                    </b:EventTrigger>
+                                </b:Interaction.Triggers>
+                            </Button>
+                            <Button
+                                Margin="10"
+Cursor="Hand"
+
+                                HorizontalAlignment="Right"
+                                Content="Login">
+                                <b:Interaction.Triggers>
+                                    <b:EventTrigger EventName="Click">
+                                        <b:InvokeCommandAction Command="{Binding LogBtnClickCommand}" />
+                                    </b:EventTrigger>
+                                </b:Interaction.Triggers>
+                            </Button>
+                        </Grid>
+                        <hc:TextBox
+                            Grid.Row="2"
+                            Margin="10"
+                            hc:InfoElement.Placeholder="Username"
+                            Foreground="Black"
+                            Text="{Binding LogUsernameText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        <hc:PasswordBox
+                            Foreground="Black"
+                            Name="LogPass"
+                            Grid.Row="3"
+                            Margin="10"
+                            hc:InfoElement.Placeholder="Password"
+                            materialDesign:HintAssist.Hint="Password"
+                            ShowClearButton="True"
+                            ShowEyeButton="True">
+                            <b:Interaction.Triggers>
+                                <b:EventTrigger EventName="Loaded">
+                                    <b:InvokeCommandAction Command="{Binding LogPassCommand}" CommandParameter="{Binding ElementName=LogPass}" />
+                                </b:EventTrigger>
+                            </b:Interaction.Triggers>
+                        </hc:PasswordBox>
+                        <Button
+                            Grid.Row="4"
+Cursor="Hand"
+
+                            Margin="10,20,10,20"
+                            Content="Login">
+                            <b:Interaction.Triggers>
+                                <b:EventTrigger EventName="Click">
+                                    <b:InvokeCommandAction Command="{Binding LoginBtnClickCommand}" />
+                                </b:EventTrigger>
+                            </b:Interaction.Triggers>
+                        </Button>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+        </materialDesign:Card>
+    </hc:TransitioningContentControl>
+</Window>

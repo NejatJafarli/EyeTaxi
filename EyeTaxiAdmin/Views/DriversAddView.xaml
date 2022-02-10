@@ -1,0 +1,190 @@
+﻿<Window
+    x:Class="EyeTaxiAdmin.Views.DriversAddView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ViewModel="clr-namespace:EyeTaxiAdmin.ViewModel"
+    xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
+    xmlns:converters="clr-namespace:EyeTaxiAdmin.Converters"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:esri="http://schemas.esri.com/arcgis/runtime/2013"
+    xmlns:hc="https://handyorg.github.io/handycontrol"
+    xmlns:local="clr-namespace:EyeTaxiAdmin.Views"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:system="clr-namespace:System;assembly=mscorlib"
+    xmlns:viewModels="clr-namespace:EyeTaxi.ViewModels;assembly=EyeTaxi"
+    Name="AddWindow"
+    Title="DriversAddView"
+    Width="450"
+    Height="950"
+    AllowsTransparency="True"
+    Background="Transparent"
+    FontFamily="Product Sans"
+    ResizeMode="NoResize"
+    SizeToContent="WidthAndHeight"
+    TextElement.FontSize="13"
+    TextElement.FontWeight="Regular"
+    TextOptions.TextFormattingMode="Ideal"
+    TextOptions.TextRenderingMode="Auto"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <Window.DataContext>
+        <ViewModel:DriversAddViewModel />
+    </Window.DataContext>
+    <Window.Resources>
+        <converters:ColorToBrushConverter x:Key="ColorToBrushConverter" />
+        <viewModels:MapViewModel x:Key="MapViewModel" />
+    </Window.Resources>
+    <materialDesign:Card
+        Name="Border"
+        Width="350"
+        Margin="40"
+        materialDesign:ShadowAssist.ShadowDepth="Depth5"
+        materialDesign:ShadowAssist.ShadowEdges="All"
+        Background="White"
+        UniformCornerRadius="5">
+
+        <StackPanel>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <TextBlock
+                    Grid.Column="0"
+                    Margin="10,0,0,0"
+                    VerticalAlignment="Center"
+                    FontFamily="Product Sans"
+                    FontSize="40"
+                    FontWeight="Bold"
+                    MouseDown="Window_MouseDown"
+                    Text="Add driver" />
+                <Button
+                    Grid.Column="1"
+                    Width="25"
+                    Height="25"
+                    Margin="0,0,10,0"
+                    Padding="7"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    hc:BackgroundSwitchElement.MouseDownBackground="PaleVioletRed"
+                    hc:BackgroundSwitchElement.MouseHoverBackground="Red"
+                    hc:BorderElement.CornerRadius="25"
+                    hc:IconElement.Geometry="{StaticResource DeleteGeometry}"
+                    Background="#4760F3"
+                    Style="{StaticResource ButtonCustom}">
+                    <b:Interaction.Triggers>
+                        <b:EventTrigger EventName="PreviewMouseLeftButtonDown">
+                            <b:InvokeCommandAction Command="{Binding CloseButtonClickCommand}" CommandParameter="{Binding ElementName=AddWindow}" />
+                        </b:EventTrigger>
+                    </b:Interaction.Triggers>
+                    <materialDesign:PackIcon
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Foreground="White"
+                        Kind="Close" />
+                </Button>
+            </Grid>
+            <hc:TextBox
+                Height="40"
+                Margin="10"
+                hc:InfoElement.Necessary="True"
+                hc:InfoElement.Placeholder="Name"
+                Text="{Binding NameText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            <hc:TextBox
+                Height="40"
+                Margin="10"
+                hc:InfoElement.Necessary="True"
+                hc:InfoElement.Placeholder="Surname"
+                Text="{Binding SurnameText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            <hc:TextBox
+                Height="40"
+                Margin="10"
+                hc:InfoElement.Necessary="True"
+                hc:InfoElement.Placeholder="Phone number"
+                Text="{Binding PhoneText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                TextType="Digits" />
+            <hc:TextBox
+                Height="40"
+                Margin="10"
+                hc:InfoElement.Necessary="True"
+                hc:InfoElement.Placeholder="Car vendor"
+                Text="{Binding CarVendorText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            <hc:TextBox
+                Height="40"
+                Margin="10"
+                hc:InfoElement.Necessary="True"
+                hc:InfoElement.Placeholder="Car model"
+                Text="{Binding CarModelText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            <hc:TextBox
+                Height="40"
+                Margin="10"
+                hc:InfoElement.Necessary="True"
+                hc:InfoElement.Placeholder="Car plate number"
+                Text="{Binding CarPlateText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            <materialDesign:Card
+                Margin="10"
+                materialDesign:ShadowAssist.ShadowDepth="Depth0"
+                UniformCornerRadius="8">
+                <StackPanel>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Foreground="#BDBDBD" Text="Car color" />
+                        <TextBlock
+                            Grid.Column="1"
+                            HorizontalAlignment="Right"
+                            Background="{Binding Color, ElementName=ColorPicker, Converter={StaticResource ColorToBrushConverter}}"
+                            Foreground="#BDBDBD"
+                            Text="{Binding Color, ElementName=ColorPicker, UpdateSourceTrigger=PropertyChanged}" />
+                    </Grid>
+                    <materialDesign:ColorPicker
+                        Name="ColorPicker"
+                        Height="150"
+                        Color="{Binding CarColor,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"
+                        ToolTip="{Binding Color, ElementName=ColorPicker, UpdateSourceTrigger=PropertyChanged}" />
+                </StackPanel>
+            </materialDesign:Card>
+            <materialDesign:Card
+                Height="150"
+                Margin="10"
+                materialDesign:ShadowAssist.ShadowDepth="Depth0"
+                UniformCornerRadius="10">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <TextBlock Margin="2" Foreground="#BDBDBD" Text="Location" />
+                    <esri:MapView
+                        x:Name="MyMap"
+                        Grid.Row="1" PreviewMouseRightButtonDown="MyMap_PreviewMouseRightButtonDown"
+                        IsAttributionTextVisible="False" 
+                        Map="{Binding Map,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" >
+                        <b:Interaction.Triggers>
+                            <b:EventTrigger EventName="PreviewMouseRightButtonDown">
+                                <b:InvokeCommandAction Command="{Binding MapRightClickCommand}" CommandParameter="{Binding ElementName=MyMap}"/>
+                            </b:EventTrigger>
+                            <b:EventTrigger EventName="Loaded">
+                                <b:InvokeCommandAction Command="{Binding MapLoadedCommand}" CommandParameter="{Binding ElementName=MyMap}"/>
+                            </b:EventTrigger>
+                        </b:Interaction.Triggers>
+                        <!--<esri:MapView.DataContext>
+                            <viewModels:MapViewModel />
+                        </esri:MapView.DataContext>-->
+                    </esri:MapView>
+                </Grid>
+            </materialDesign:Card>
+            <Button Margin="10" Content="Add" >
+                <b:Interaction.Triggers>
+                    <b:EventTrigger EventName="Click">
+                        <b:InvokeCommandAction Command="{Binding AddButtonClickCommand}" CommandParameter="{Binding ElementName=AddWindow}"/>
+                    </b:EventTrigger>
+                </b:Interaction.Triggers>
+            </Button>
+        </StackPanel>
+    </materialDesign:Card>
+</Window>

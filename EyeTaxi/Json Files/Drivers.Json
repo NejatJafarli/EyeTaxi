@@ -1,0 +1,78 @@
+[
+  {
+    "Name": "Nejat",
+    "Surname": "Jafarli",
+    "Phone": "\u002B994558448831",
+    "CarModel": "E60",
+    "CarVendor": "BMW",
+    "CarNumber": "50-CX-810",
+    "CarColor": "#8C2727",
+    "Location": {
+      "X": 50.052530000000047,
+      "Y": 40.460710000000063
+    },
+    "Balance": 0,
+    "Rating": 0,
+    "CountTravel": 0,
+    "TotalRating": 0,
+    "DriverBenefit": 0,
+    "CompanyBenefit": 0
+  },
+  {
+    "Name": "Azer",
+    "Surname": "Rehimli",
+    "Phone": "\u002B994557831423",
+    "CarModel": "2107",
+    "CarVendor": "Vaz",
+    "CarNumber": "50-CY-340",
+    "CarColor": "#210EF7",
+    "Location": {
+      "X": 49.796940000000063,
+      "Y": 40.39775000000003
+    },
+    "Balance": 11.09,
+    "Rating": 3.5,
+    "CountTravel": 2,
+    "TotalRating": 7,
+    "DriverBenefit": 9.4265000000000008,
+    "CompanyBenefit": 1.6635
+  },
+  {
+    "Name": "Ilham",
+    "Surname": "Mustafazade",
+    "Phone": "\u002B994509401239",
+    "CarModel": "Rio",
+    "CarVendor": "Kia",
+    "CarNumber": "90-KX-560",
+    "CarColor": "#35FB03",
+    "Location": {
+      "X": 49.847330000000056,
+      "Y": 40.379620000000045
+    },
+    "Balance": 36.489999999999995,
+    "Rating": 4.5999999999999996,
+    "CountTravel": 5,
+    "TotalRating": 23,
+    "DriverBenefit": 31.016499999999997,
+    "CompanyBenefit": 5.4734999999999987
+  },
+  {
+    "Name": "Edbul",
+    "Surname": "Hajiyev",
+    "Phone": "\u002B994558448831",
+    "CarModel": "F10",
+    "CarVendor": "Bmw",
+    "CarNumber": "90-FF-100",
+    "CarColor": "",
+    "Location": {
+      "X": 49.832137972878151,
+      "Y": 40.376643412606249
+    },
+    "Balance": 0,
+    "Rating": 0,
+    "CountTravel": 0,
+    "TotalRating": 0,
+    "DriverBenefit": 0,
+    "CompanyBenefit": 0
+  }
+]

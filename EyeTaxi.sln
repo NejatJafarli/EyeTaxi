@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EyeTaxi", "EyeTaxi\EyeTaxi.csproj", "{1641BA6B-0949-43DF-852F-025B0EFE8D9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EyeTaxiAdmin", "EyeTaxiAdmin\EyeTaxiAdmin.csproj", "{54460D05-91DB-4758-8EB2-9DE08F0FCBAC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1641BA6B-0949-43DF-852F-025B0EFE8D9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1641BA6B-0949-43DF-852F-025B0EFE8D9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1641BA6B-0949-43DF-852F-025B0EFE8D9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1641BA6B-0949-43DF-852F-025B0EFE8D9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54460D05-91DB-4758-8EB2-9DE08F0FCBAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54460D05-91DB-4758-8EB2-9DE08F0FCBAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54460D05-91DB-4758-8EB2-9DE08F0FCBAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54460D05-91DB-4758-8EB2-9DE08F0FCBAC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0EDF9827-4B4B-4ED3-A688-6079B82A4ABE}
+	EndGlobalSection
+EndGlobal
